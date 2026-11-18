@@ -1,0 +1,29 @@
+.projects {
+  display: grid;
+  gap: 56px;
+}
+
+.project {
+  display: grid;
+  gap: 16px;
+}
+
+.project__head {
+  display: grid;
+  gap: 8px;
+  max-width: 1056px;
+}
+
+@media (min-width: 1024px) {
+  .projects {
+    gap: 120px;
+  }
+
+  .project {
+    gap: 32px;
+  }
+
+  .project__head {
+    gap: 16px;
+  }
+}

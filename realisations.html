@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Réalisations | E.T. Rénovation Annemasse</title>
+  <meta name="description" content="Salle de bain, extension, façade : comparez nos chantiers avant et après travaux en Haute-Savoie.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/barlow-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/base/variables.css">
+  <link rel="stylesheet" href="assets/css/base/reset.css">
+  <link rel="stylesheet" href="assets/css/base/typography.css">
+  <link rel="stylesheet" href="assets/css/layout/container.css">
+  <link rel="stylesheet" href="assets/css/layout/section.css">
+  <link rel="stylesheet" href="assets/css/layout/header.css">
+  <link rel="stylesheet" href="assets/css/layout/footer.css">
+  <link rel="stylesheet" href="assets/css/components/button.css">
+  <link rel="stylesheet" href="assets/css/components/link.css">
+  <link rel="stylesheet" href="assets/css/components/hero.css">
+  <link rel="stylesheet" href="assets/css/components/before-after.css">
+  <link rel="stylesheet" href="assets/css/components/line-list.css">
+  <link rel="stylesheet" href="assets/css/components/cta.css">
+  <link rel="stylesheet" href="assets/css/pages/projects.css">
+  <script type="module" src="assets/js/pages/projects.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__logo" href="index.html">
+        <img src="assets/images/logo-et.png" alt="E.T. Aménagement Rénovation et Création, accueil" width="182" height="60">
+      </a>
+      <button class="header__toggle" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="header__toggle-label">Menu</span>
+      </button>
+      <nav class="header__nav" id="menu" aria-label="Navigation principale">
+        <ul class="header__links">
+          <li><a class="header__link" href="index.html">Accueil</a></li>
+          <li><a class="header__link" href="services.html">Services</a></li>
+          <li><a class="header__link" href="realisations.html" aria-current="page">Réalisations</a></li>
+          <li><a class="header__link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="header__action">
+          <a class="button button--primary" href="devis.html">Demander un devis</a>
+          <p class="header__phone">Ou appelez-nous au <a href="tel:+33465712030">04 65 71 20 30</a></p>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="hero">
+      <img class="hero__image" src="assets/images/hero/projects-1920.webp" srcset="assets/images/hero/projects-960.webp 960w, assets/images/hero/projects-1920.webp 1920w" sizes="100vw" alt="" width="1920" height="1920" fetchpriority="high">
+      <div class="container hero__content">
+        <nav class="breadcrumb" aria-label="Fil d’Ariane">
+          <ol>
+            <li><a href="index.html">Accueil</a></li>
+            <li aria-current="page">Réalisations</li>
+          </ol>
+        </nav>
+        <h1 class="hero__title">Nos chantiers, avant et après.</h1>
+        <p class="hero__text">Faites glisser la barre sur chaque photo pour comparer l’état du chantier avant et après nos travaux.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Chantiers">
+      <div class="container projects">
+        <article class="project" aria-labelledby="chantier-sdb">
+          <div class="project__head">
+            <h2 id="chantier-sdb">Salle de bain à Annecy</h2>
+            <p>Baignoire remplacée par une douche à l’italienne, carrelage grand format au sol et aux murs.</p>
+          </div>
+          <div class="before-after">
+            <img class="before-after__image" src="assets/images/projects/bathroom-after-1600.webp" srcset="assets/images/projects/bathroom-after-800.webp 800w, assets/images/projects/bathroom-after-1600.webp 1600w" sizes="(min-width: 1760px) 1600px, 100vw" alt="Après : salle de bain rénovée avec douche vitrée et double vasque" width="1600" height="1064" loading="lazy">
+            <img class="before-after__image before-after__before" src="assets/images/projects/bathroom-before-1600.webp" srcset="assets/images/projects/bathroom-before-800.webp 800w, assets/images/projects/bathroom-before-1600.webp 1600w" sizes="(min-width: 1760px) 1600px, 100vw" alt="Avant : pièce en démolition avec étais et gravats" width="1600" height="1067" loading="lazy">
+            <span class="before-after__tag before-after__tag--before" aria-hidden="true">Avant</span>
+            <span class="before-after__tag before-after__tag--after" aria-hidden="true">Après</span>
+            <span class="before-after__line"></span>
+            <input class="before-after__range" type="range" min="0" max="100" value="50" aria-label="Comparer la photo avant et la photo après">
+          </div>
+          <dl class="line-list line-list--split line-list--columns">
+            <div><dt>Travaux</dt><dd>Rénovation intérieure</dd></div>
+            <div><dt>Surface</dt><dd>8 m²</dd></div>
+            <div><dt>Durée</dt><dd>3 semaines</dd></div>
+            <div><dt>Budget</dt><dd>9 800 € TTC</dd></div>
+          </dl>
+        </article>
+
+        <article class="project" aria-labelledby="chantier-extension">
+          <div class="project__head">
+            <h2 id="chantier-extension">Extension à Reignier</h2>
+            <p>Une pièce de vie de 25 m² ajoutée à l’arrière de la maison, avec une baie vitrée sur le jardin.</p>
+          </div>
+          <div class="before-after">
+            <img class="before-after__image" src="assets/images/projects/extension-after-1600.webp" srcset="assets/images/projects/extension-after-800.webp 800w, assets/images/projects/extension-after-1600.webp 1600w" sizes="(min-width: 1760px) 1600px, 100vw" alt="Après : extension blanche avec baie vitrée" width="1600" height="1272" loading="lazy">
+            <img class="before-after__image before-after__before" src="assets/images/projects/extension-before-1600.webp" srcset="assets/images/projects/extension-before-800.webp 800w, assets/images/projects/extension-before-1600.webp 1600w" sizes="(min-width: 1760px) 1600px, 100vw" alt="Avant : murs en briques montés, toiture pas encore posée" width="1600" height="1204" loading="lazy">
+            <span class="before-after__tag before-after__tag--before" aria-hidden="true">Avant</span>
+            <span class="before-after__tag before-after__tag--after" aria-hidden="true">Après</span>
+            <span class="before-after__line"></span>
+            <input class="before-after__range" type="range" min="0" max="100" value="50" aria-label="Comparer la photo avant et la photo après">
+          </div>
+          <dl class="line-list line-list--split line-list--columns">
+            <div><dt>Travaux</dt><dd>Extension</dd></div>
+            <div><dt>Surface</dt><dd>25 m²</dd></div>
+            <div><dt>Durée</dt><dd>4 mois</dd></div>
+            <div><dt>Budget</dt><dd>62 000 € TTC</dd></div>
+          </dl>
+        </article>
+
+        <article class="project" aria-labelledby="chantier-facade">
+          <div class="project__head">
+            <h2 id="chantier-facade">Façade à Gaillard</h2>
+            <p>Ravalement complet et isolation par l’extérieur d’une maison des années 1970.</p>
+          </div>
+          <div class="before-after">
+            <img class="before-after__image" src="assets/images/projects/facade-after-1600.webp" srcset="assets/images/projects/facade-after-800.webp 800w, assets/images/projects/facade-after-1600.webp 1600w" sizes="(min-width: 1760px) 1600px, 100vw" alt="Après : façade blanche ravalée" width="1600" height="2400" loading="lazy">
+            <img class="before-after__image before-after__before" src="assets/images/projects/facade-before-1600.webp" srcset="assets/images/projects/facade-before-800.webp 800w, assets/images/projects/facade-before-1600.webp 1600w" sizes="(min-width: 1760px) 1600px, 100vw" alt="Avant : maison sous échafaudage pendant le ravalement" width="1600" height="1200" loading="lazy">
+            <span class="before-after__tag before-after__tag--before" aria-hidden="true">Avant</span>
+            <span class="before-after__tag before-after__tag--after" aria-hidden="true">Après</span>
+            <span class="before-after__line"></span>
+            <input class="before-after__range" type="range" min="0" max="100" value="50" aria-label="Comparer la photo avant et la photo après">
+          </div>
+          <dl class="line-list line-list--split line-list--columns">
+            <div><dt>Travaux</dt><dd>Façades</dd></div>
+            <div><dt>Surface</dt><dd>180 m²</dd></div>
+            <div><dt>Durée</dt><dd>5 semaines</dd></div>
+            <div><dt>Budget</dt><dd>24 500 € TTC</dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--grey" aria-labelledby="projet-titre">
+      <div class="container cta">
+        <div class="cta__text">
+          <h2 id="projet-titre">Vous avez un projet de travaux ?</h2>
+          <p>Nous passons voir votre chantier et nous vous envoyons un devis détaillé sous une semaine, gratuitement et sans engagement.</p>
+        </div>
+        <div class="cta__actions">
+          <a class="button button--primary" href="devis.html">Demander un devis</a>
+          <p class="text-small">Ou appelez-nous au <a href="tel:+33465712030">04 65 71 20 30</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__columns">
+        <div class="footer__about">
+          <img src="assets/images/logo-et.png" alt="E.T. Aménagement Rénovation et Création" width="194" height="64" loading="lazy">
+          <p>Entreprise de rénovation à Annemasse depuis 1987 : maçonnerie, rénovation intérieure, façades et extensions, partout en Haute-Savoie.</p>
+        </div>
+        <nav aria-label="Pied de page">
+          <h2 class="footer__title">Navigation</h2>
+          <ul class="footer__list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="entreprise.html">L’entreprise</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer__title">Nos services</h2>
+          <ul class="footer__list">
+            <li><a href="services.html#maconnerie">Maçonnerie</a></li>
+            <li><a href="services.html#renovation-interieure">Rénovation intérieure</a></li>
+            <li><a href="services.html#facades">Façades</a></li>
+            <li><a href="services.html#extensions">Extensions</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h2 class="footer__title">Contact</h2>
+          <div class="footer__list">
+            <address>12 rue des Artisans<br>74100 Annemasse</address>
+            <a href="tel:+33465712030">04 65 71 20 30</a>
+            <a href="mailto:contact@et-renovation.fr">contact@et-renovation.fr</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 E.T. Tous droits réservés.</p>
+        <ul class="footer__legal">
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
