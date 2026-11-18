@@ -1,0 +1,28 @@
+.section {
+  padding-block: var(--section-space);
+}
+
+.section--grey {
+  background: var(--color-concrete);
+}
+
+.section__head {
+  display: grid;
+  gap: 16px;
+  margin-bottom: clamp(32px, 4vw, 48px);
+}
+
+.section__head p {
+  max-width: 920px;
+}
+
+.section__head--split {
+  grid-template-columns: 1fr;
+  align-items: end;
+}
+
+@media (min-width: 768px) {
+  .section__head--split {
+    grid-template-columns: 1fr auto;
+  }
+}
