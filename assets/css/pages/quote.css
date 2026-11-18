@@ -1,0 +1,174 @@
+.quote {
+  display: grid;
+  gap: 40px;
+}
+
+.quote__form {
+  display: grid;
+  gap: 56px;
+}
+
+.quote__step {
+  display: grid;
+  gap: 24px;
+}
+
+.quote__step[hidden] {
+  display: none;
+}
+
+.quote__legend {
+  float: left;
+  width: 100%;
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  line-height: 1.22;
+  color: var(--color-navy);
+}
+
+.quote__intro {
+  clear: left;
+  margin-top: -16px;
+}
+
+.quote__note {
+  font-size: var(--text-small);
+}
+
+.quote__trap {
+  position: absolute;
+  left: -9999px;
+}
+
+.estimate {
+  display: grid;
+  gap: 8px;
+  padding: 24px;
+  background: var(--color-concrete);
+}
+
+.estimate__label,
+.estimate__detail {
+  font-size: var(--text-small);
+}
+
+.estimate__price {
+  font-family: var(--font-heading);
+  font-size: var(--text-price);
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-navy);
+}
+
+.commune__box {
+  position: relative;
+}
+
+.commune__list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  border: 1px solid var(--color-border);
+  border-top: 0;
+  background: var(--color-white);
+}
+
+.commune__list:empty {
+  display: none;
+}
+
+.commune__list li {
+  padding: 12px 16px;
+  color: var(--color-navy);
+  cursor: pointer;
+}
+
+.commune__list li[aria-selected="true"],
+.commune__list li:hover {
+  background: var(--color-concrete);
+}
+
+.quote__actions {
+  display: grid;
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-line);
+}
+
+.quote__actions .button {
+  width: 100%;
+}
+
+.quote__status {
+  font-weight: 600;
+  color: #b42318;
+}
+
+.quote__status:empty {
+  display: none;
+}
+
+.confirmation {
+  display: grid;
+  gap: 40px;
+}
+
+.confirmation[hidden] {
+  display: none;
+}
+
+.confirmation__head {
+  display: grid;
+  gap: 16px;
+}
+
+.confirmation__next {
+  display: grid;
+  gap: 16px;
+}
+
+.confirmation__next li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+}
+
+.confirmation__next p {
+  color: var(--color-text);
+}
+
+.confirmation .button {
+  justify-self: start;
+}
+
+@media (min-width: 768px) {
+  .quote__actions {
+    grid-auto-flow: column;
+    justify-content: space-between;
+  }
+
+  .quote__actions .button {
+    width: auto;
+  }
+
+  .quote__actions .button--primary:only-child {
+    grid-column: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .quote {
+    gap: 56px;
+  }
+
+  .quote__step {
+    gap: 32px;
+  }
+
+  .quote__actions {
+    padding-top: 32px;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "origin": {
+    "name": "Annemasse",
+    "coordinates": [6.2362, 46.1934]
+  },
+  "travel": {
+    "freeUpToKm": 15,
+    "pricePerKm": 1.2,
+    "maxKm": 80
+  },
+  "works": [
+    { "id": "salle-de-bain", "label": "Rénovation de salle de bain", "min": 900, "max": 1440 },
+    { "id": "cuisine", "label": "Rénovation de cuisine", "min": 700, "max": 1200 },
+    { "id": "piece", "label": "Rénovation complète d’une pièce", "min": 450, "max": 800 },
+    { "id": "maconnerie", "label": "Maçonnerie (murs, dalle, ouverture)", "min": 180, "max": 350 },
+    { "id": "ravalement", "label": "Ravalement de façade", "min": 40, "max": 80 },
+    { "id": "isolation-exterieure", "label": "Isolation par l’extérieur", "min": 120, "max": 200 },
+    { "id": "extension", "label": "Extension de maison", "min": 1800, "max": 2600 }
+  ]
+}
