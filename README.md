@@ -4,6 +4,8 @@ Site vitrine d’une entreprise de rénovation fictive installée à Annemasse, 
 
 Le site présente l’entreprise, ses quatre métiers et ses chantiers, et permet d’estimer le prix de ses travaux avant d’envoyer une demande de devis.
 
+Site en ligne : https://et-renovation.vercel.app
+
 ## Fonctionnalités
 
 - **Estimateur de prix** : type de travaux, surface et commune. Le prix et les frais de déplacement depuis Annemasse sont calculés aussitôt.
@@ -55,7 +57,7 @@ Puis ouvrir `http://localhost:5500`.
 
 ## Configuration
 
-**Formspree** : créer un formulaire sur [formspree.io](https://formspree.io), puis remplacer `VOTRE_ID_FORMSPREE` dans l’attribut `action` du formulaire de `devis.html`.
+**Formspree** : créer un formulaire sur [formspree.io](https://formspree.io), puis mettre son identifiant dans l’attribut `action` du formulaire de `devis.html`.
 
 **Cloudinary** : créer un « upload preset » non signé, puis renseigner `data-cloud-name` et `data-upload-preset` sur le formulaire de `devis.html`. Sans ces deux valeurs, la demande part sans les photos.
 
