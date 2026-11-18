@@ -1,0 +1,35 @@
+:root {
+  --color-navy: #0b2f4a;
+  --color-navy-light: #164466;
+  --color-green: #84c424;
+  --color-green-dark: #74ad1f;
+  --color-text: #4f5b66;
+  --color-border: #737d87;
+  --color-line: #cfd5db;
+  --color-concrete: #eef1f4;
+  --color-white: #ffffff;
+
+  --font-heading: "Barlow", "Arial Narrow", sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --text-h1: clamp(2rem, 1.6rem + 1.4vw, 3rem);
+  --text-hero: clamp(2.25rem, 1.4rem + 3.4vw, 4rem);
+  --text-h2: clamp(1.5rem, 1.2rem + 1vw, 2.25rem);
+  --text-h3: clamp(1.125rem, 1rem + 0.5vw, 1.5rem);
+  --text-price: clamp(1.375rem, 1.1rem + 1vw, 2rem);
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+
+  --container: 1600px;
+  --gutter: clamp(20px, 8.4vw, 160px);
+  --section-space: clamp(56px, 8vw, 120px);
+  --header-height: 72px;
+
+  --transition: 0.2s ease;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --header-height: 88px;
+  }
+}
