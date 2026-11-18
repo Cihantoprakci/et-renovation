@@ -1,0 +1,49 @@
+.features {
+  display: grid;
+  gap: 56px;
+}
+
+.feature {
+  display: grid;
+  gap: 16px;
+  align-items: center;
+}
+
+.feature__image {
+  width: 100%;
+  aspect-ratio: 7 / 5;
+  object-fit: cover;
+}
+
+.feature__body {
+  display: grid;
+  gap: 24px;
+}
+
+.feature__number {
+  font-weight: 600;
+}
+
+.feature__head {
+  display: grid;
+  gap: 12px;
+}
+
+@media (min-width: 1024px) {
+  .features {
+    gap: 120px;
+  }
+
+  .feature {
+    grid-template-columns: 49fr 40.5fr;
+    gap: 10.5%;
+  }
+
+  .feature--reverse {
+    grid-template-columns: 40.5fr 49fr;
+  }
+
+  .feature--reverse .feature__image {
+    order: 2;
+  }
+}

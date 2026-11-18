@@ -1,0 +1,27 @@
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--color-navy);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.link-arrow::after {
+  content: "";
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background: currentColor;
+  mask: url("../../icons/arrow.svg") center / contain no-repeat;
+  transition: transform var(--transition);
+}
+
+.link-arrow:hover::after {
+  transform: translateX(4px);
+}
+
+.link-arrow--light {
+  color: var(--color-white);
+}

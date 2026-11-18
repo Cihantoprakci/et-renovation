@@ -1,0 +1,38 @@
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.checkbox input {
+  flex-shrink: 0;
+  display: grid;
+  place-content: center;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  appearance: none;
+  cursor: pointer;
+}
+
+.checkbox input::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: var(--color-white);
+  mask: url("../../icons/check.svg") center / contain no-repeat;
+  transform: scale(0);
+}
+
+.checkbox input:checked {
+  border-color: var(--color-navy);
+  background: var(--color-navy);
+}
+
+.checkbox input:checked::before {
+  transform: scale(1);
+}

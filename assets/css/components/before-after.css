@@ -1,0 +1,98 @@
+.before-after {
+  --position: 50%;
+  position: relative;
+  aspect-ratio: 335 / 240;
+  overflow: hidden;
+  user-select: none;
+}
+
+.before-after__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.before-after__before {
+  clip-path: inset(0 calc(100% - var(--position)) 0 0);
+}
+
+.before-after__line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--position);
+  width: 2px;
+  margin-left: -1px;
+  background: var(--color-white);
+  pointer-events: none;
+}
+
+.before-after__line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  background: var(--color-white) url("../../icons/handle.svg") center / 22px no-repeat;
+}
+
+.before-after__range {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+}
+
+.before-after:has(.before-after__range:focus-visible) .before-after__line::after {
+  outline: 3px solid var(--color-green);
+  outline-offset: 2px;
+}
+
+.before-after__tag {
+  position: absolute;
+  top: 12px;
+  padding: 6px 12px;
+  background: var(--color-navy);
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--color-white);
+  pointer-events: none;
+}
+
+.before-after__tag--before {
+  left: 12px;
+}
+
+.before-after__tag--after {
+  right: 12px;
+}
+
+@media (min-width: 1024px) {
+  .before-after {
+    aspect-ratio: 2 / 1;
+  }
+
+  .before-after__line::after {
+    width: 56px;
+    height: 56px;
+  }
+
+  .before-after__tag {
+    top: 24px;
+  }
+
+  .before-after__tag--before {
+    left: 24px;
+  }
+
+  .before-after__tag--after {
+    right: 24px;
+  }
+}

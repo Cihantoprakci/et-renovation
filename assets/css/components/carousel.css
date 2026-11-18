@@ -1,0 +1,95 @@
+.carousel__track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel__slide {
+  display: grid;
+  gap: 16px;
+  scroll-snap-align: start;
+}
+
+.carousel__image {
+  width: 100%;
+  aspect-ratio: 335 / 220;
+  object-fit: cover;
+}
+
+.carousel__caption {
+  display: grid;
+  gap: 4px;
+}
+
+.carousel__caption p {
+  font-size: var(--text-small);
+}
+
+.carousel__controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.carousel__count {
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.carousel__button {
+  display: grid;
+  place-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-navy);
+  color: var(--color-navy);
+}
+
+.carousel__button::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: currentColor;
+  mask: url("../../icons/arrow.svg") center / contain no-repeat;
+}
+
+.carousel__button--prev::before {
+  transform: rotate(180deg);
+}
+
+.carousel__button:hover {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.carousel__button:disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+  .carousel__image {
+    aspect-ratio: 1600 / 680;
+  }
+
+  .carousel {
+    position: relative;
+  }
+
+  .carousel__controls {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-top: 0;
+  }
+}

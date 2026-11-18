@@ -1,0 +1,27 @@
+.cta {
+  display: grid;
+  gap: 24px;
+}
+
+.cta__text {
+  display: grid;
+  gap: 16px;
+  max-width: 920px;
+}
+
+.cta__actions {
+  display: grid;
+  gap: 12px;
+}
+
+@media (min-width: 1024px) {
+  .cta {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .cta__actions {
+    justify-items: end;
+  }
+}
