@@ -1,0 +1,91 @@
+.story {
+  display: grid;
+  gap: 24px;
+}
+
+.story__text {
+  display: grid;
+  gap: 16px;
+  max-width: 648px;
+}
+
+.company-stats {
+  padding-bottom: var(--section-space);
+}
+
+.gallery {
+  display: grid;
+  gap: 32px;
+  padding-bottom: var(--section-space);
+}
+
+.gallery figure {
+  display: grid;
+  gap: 12px;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.gallery figcaption {
+  font-size: var(--text-small);
+}
+
+.trades {
+  display: grid;
+  gap: 32px;
+}
+
+.trades__intro {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.trades__zone {
+  display: grid;
+  gap: 4px;
+}
+
+.trades__list li {
+  display: grid;
+  gap: 8px;
+}
+
+.trades__list p {
+  color: var(--color-text);
+}
+
+@media (min-width: 1024px) {
+  .story {
+    grid-template-columns: 376px 1fr;
+    gap: 168px;
+  }
+
+  .gallery {
+    grid-template-columns: 920fr 648fr;
+  }
+
+  .gallery img {
+    aspect-ratio: auto;
+    height: 640px;
+  }
+
+  .trades {
+    grid-template-columns: 376px 1fr;
+    gap: 168px;
+  }
+
+  .trades__intro {
+    gap: 24px;
+  }
+
+  .trades__list li {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding-block: 32px;
+  }
+}
