@@ -1,0 +1,29 @@
+.legal {
+  display: grid;
+  gap: 32px;
+  max-width: 720px;
+}
+
+.legal__block {
+  display: grid;
+  gap: 12px;
+}
+
+.legal ul {
+  display: grid;
+  gap: 8px;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.legal a {
+  color: var(--color-navy);
+  text-underline-offset: 3px;
+}
+
+.not-found {
+  display: grid;
+  justify-items: start;
+  gap: 24px;
+  max-width: 648px;
+}
