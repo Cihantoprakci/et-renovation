@@ -1,6 +1,7 @@
 import { distanceKm } from "./distance.js";
 
-const euros = new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 });
+const formatter = new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 });
+const euros = { format: (value) => formatter.format(value).replace(/ /g, " ") };
 
 const roundTo = (value, step) => Math.round(value / step) * step;
 

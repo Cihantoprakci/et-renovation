@@ -4,7 +4,7 @@ export function initMenu() {
   if (!toggle || !nav) return;
 
   const label = toggle.querySelector(".header__toggle-label");
-  const desktop = window.matchMedia("(min-width: 1024px)");
+  const desktop = window.matchMedia("(min-width: 1200px)");
 
   const setOpen = (open) => {
     toggle.setAttribute("aria-expanded", String(open));

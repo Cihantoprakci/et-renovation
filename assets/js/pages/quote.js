@@ -46,8 +46,20 @@ const loadPrices = async () => {
     workSelect.add(new Option(work.label, work.id));
   });
 
-  const preset = new URLSearchParams(window.location.search).get("travaux");
-  if (preset) workSelect.value = preset;
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("travaux")) workSelect.value = params.get("travaux");
+  if (params.get("surface")) surfaceInput.value = params.get("surface");
+  if (params.get("commune")) communeInput.value = params.get("commune");
+
+  const lon = Number(params.get("lon"));
+  const lat = Number(params.get("lat"));
+  if (params.get("commune") && lon && lat) {
+    commune = {
+      name: params.get("commune").replace(/\s*\(.*\)$/, ""),
+      postcode: params.get("cp"),
+      coordinates: [lon, lat],
+    };
+  }
 
   workSelect.addEventListener("change", updateEstimate);
   surfaceInput.addEventListener("input", updateEstimate);
@@ -55,6 +67,7 @@ const loadPrices = async () => {
     commune = selected;
     updateEstimate();
   });
+  updateEstimate();
 };
 
 const getFiles = initFileList(

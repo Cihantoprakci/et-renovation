@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estimer le prix de mes travaux | E.T. Rénovation Annemasse</title>
+  <meta name="description" content="Estimez en ligne le prix de vos travaux de rénovation en Haute-Savoie : type de travaux, surface et commune, déplacement compris.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/barlow-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/base/variables.css">
+  <link rel="stylesheet" href="assets/css/base/reset.css">
+  <link rel="stylesheet" href="assets/css/base/typography.css">
+  <link rel="stylesheet" href="assets/css/layout/container.css">
+  <link rel="stylesheet" href="assets/css/layout/section.css">
+  <link rel="stylesheet" href="assets/css/layout/header.css">
+  <link rel="stylesheet" href="assets/css/layout/footer.css">
+  <link rel="stylesheet" href="assets/css/components/button.css">
+  <link rel="stylesheet" href="assets/css/components/link.css">
+  <link rel="stylesheet" href="assets/css/components/hero.css">
+  <link rel="stylesheet" href="assets/css/components/field.css">
+  <link rel="stylesheet" href="assets/css/components/line-list.css">
+  <link rel="stylesheet" href="assets/css/components/commune.css">
+  <link rel="stylesheet" href="assets/css/pages/estimate.css">
+  <script type="module" src="assets/js/pages/estimate.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__logo" href="index.html">
+        <img src="assets/images/logo-et.png" alt="E.T. Aménagement Rénovation et Création, accueil" width="182" height="60">
+      </a>
+      <button class="header__toggle" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="header__toggle-label">Menu</span>
+      </button>
+      <nav class="header__nav" id="menu" aria-label="Navigation principale">
+        <ul class="header__links">
+          <li><a class="header__link" href="index.html">Accueil</a></li>
+          <li><a class="header__link" href="services.html">Services</a></li>
+          <li><a class="header__link" href="realisations.html">Réalisations</a></li>
+          <li><a class="header__link" href="estimation.html" aria-current="page">Estimation</a></li>
+          <li><a class="header__link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="header__action">
+          <a class="button button--primary" href="devis.html">Demander un devis</a>
+          <p class="header__phone">Ou appelez-nous au <a href="tel:+33465712030">04 65 71 20 30</a></p>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="hero">
+      <img class="hero__image" src="assets/images/hero/estimate-1920.webp" srcset="assets/images/hero/estimate-960.webp 960w, assets/images/hero/estimate-1920.webp 1920w" sizes="100vw" alt="" width="1920" height="1440" fetchpriority="high">
+      <div class="container hero__content">
+        <nav class="breadcrumb" aria-label="Fil d’Ariane">
+          <ol>
+            <li><a href="index.html">Accueil</a></li>
+            <li aria-current="page">Estimer mon prix</li>
+          </ol>
+        </nav>
+        <h1 class="hero__title">Combien vont coûter vos travaux&nbsp;?</h1>
+        <p class="hero__text">Trois questions, une fourchette de prix tout de suite. Gratuit, sans inscription et sans engagement.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container estimator">
+        <form class="estimator__form" id="estimateur" action="devis.html" method="get">
+          <div class="estimator__head">
+            <h2>Vos travaux</h2>
+            <p>Le prix se met à jour à chaque réponse.</p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="travaux">Type de travaux</label>
+            <select class="field__input" id="travaux" name="travaux">
+              <option value="">Choisissez vos travaux</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="surface">Surface approximative en m²</label>
+            <input class="field__input" type="number" id="surface" name="surface" min="1" step="1" inputmode="numeric">
+          </div>
+          <div class="field">
+            <label class="field__label" for="commune">Commune du chantier</label>
+            <div class="commune__box">
+              <input class="field__input" type="text" id="commune" name="commune" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="commune-list" autocomplete="off" aria-describedby="commune-help">
+              <ul class="commune__list" id="commune-list" role="listbox" aria-label="Communes proposées"></ul>
+            </div>
+            <p class="field__help" id="commune-help">Pour calculer le déplacement depuis Annemasse.</p>
+          </div>
+          <input type="hidden" name="cp">
+          <input type="hidden" name="lat">
+          <input type="hidden" name="lon">
+        </form>
+
+        <aside class="result" aria-labelledby="resultat-titre">
+          <h2 class="result__label" id="resultat-titre">Prix estimé</h2>
+          <p class="result__price" aria-live="polite">Répondez aux questions</p>
+          <p class="result__detail" aria-live="polite">Choisissez vos travaux et indiquez la surface pour voir le prix.</p>
+          <button class="button button--primary" type="submit" form="estimateur">Demander un devis gratuit</button>
+          <p class="result__note">Vos réponses sont reprises dans la demande. Le prix définitif est fixé après la visite gratuite du chantier.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--grey" aria-labelledby="calcul-titre">
+      <div class="container estimator-how">
+        <h2 id="calcul-titre">Comment ce prix est calculé</h2>
+        <ol class="line-list line-list--loose">
+          <li><strong>01</strong><div><strong>Un prix au m² par type de travaux</strong><p>Fournitures et pose comprises, d’après nos chantiers récents en Haute-Savoie.</p></div></li>
+          <li><strong>02</strong><div><strong>Le déplacement</strong><p>Offert jusqu’à 15 km d’Annemasse, puis 1,20 € par kilomètre. Nous intervenons jusqu’à 80 km.</p></div></li>
+          <li><strong>03</strong><div><strong>Le devis après la visite</strong><p>Un chef de chantier vient voir votre projet et vous envoie un devis détaillé dans la semaine.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__columns">
+        <div class="footer__about">
+          <img src="assets/images/logo-et.png" alt="E.T. Aménagement Rénovation et Création" width="194" height="64" loading="lazy">
+          <p>Entreprise de rénovation à Annemasse depuis 1987 : maçonnerie, rénovation intérieure, façades et extensions, partout en Haute-Savoie.</p>
+        </div>
+        <nav aria-label="Pied de page">
+          <h2 class="footer__title">Navigation</h2>
+          <ul class="footer__list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="entreprise.html">L’entreprise</a></li>
+            <li><a href="estimation.html">Estimer mon prix</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer__title">Nos services</h2>
+          <ul class="footer__list">
+            <li><a href="services.html#maconnerie">Maçonnerie</a></li>
+            <li><a href="services.html#renovation-interieure">Rénovation intérieure</a></li>
+            <li><a href="services.html#facades">Façades</a></li>
+            <li><a href="services.html#extensions">Extensions</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h2 class="footer__title">Contact</h2>
+          <div class="footer__list">
+            <address>12 rue des Artisans<br>74100 Annemasse</address>
+            <a href="tel:+33465712030">04 65 71 20 30</a>
+            <a href="mailto:contact@et-renovation.fr">contact@et-renovation.fr</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 E.T. Tous droits réservés.</p>
+        <ul class="footer__legal">
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

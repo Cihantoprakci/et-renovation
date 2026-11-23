@@ -8,9 +8,9 @@ Site en ligne : https://et-renovation.vercel.app
 
 ## Fonctionnalités
 
-- **Estimateur de prix** : type de travaux, surface et commune. Le prix et les frais de déplacement depuis Annemasse sont calculés aussitôt.
+- **Estimateur de prix** (page Estimation) : type de travaux, surface et commune. Le prix et les frais de déplacement depuis Annemasse sont calculés aussitôt, puis le bouton « Demander un devis gratuit » ouvre le formulaire déjà rempli.
 - **Recherche de commune** avec l’[API Géo](https://geo.api.gouv.fr) (liste au clavier et à la souris).
-- **Formulaire de devis en 4 étapes** : travaux, chantier, photos, coordonnées. Les réponses de l’estimateur sont reprises dans la demande.
+- **Formulaire de devis en 4 étapes** : travaux, chantier, photos, coordonnées. Les réponses de l’estimateur arrivent dans l’adresse de la page (`devis.html?travaux=…&surface=…&commune=…`) et préremplissent l’étape 1.
 - **Envoi des photos** sur Cloudinary, puis envoi du formulaire avec Formspree.
 - **Curseur avant/après** sur la page Réalisations.
 - **Menu mobile** et carrousel des chantiers sur l’accueil.

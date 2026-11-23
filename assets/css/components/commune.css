@@ -1,0 +1,29 @@
+.commune__box {
+  position: relative;
+}
+
+.commune__list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  border: 1px solid var(--color-border);
+  border-top: 0;
+  background: var(--color-white);
+}
+
+.commune__list:empty {
+  display: none;
+}
+
+.commune__list li {
+  padding: 12px 16px;
+  color: var(--color-navy);
+  cursor: pointer;
+}
+
+.commune__list li[aria-selected="true"],
+.commune__list li:hover {
+  background: var(--color-concrete);
+}
